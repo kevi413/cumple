@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Adri!</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .container { background-color: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 600px; width: 100%; overflow: hidden; padding: 50px 40px; position: relative; text-align: center; }
+        .kevin-message { background: linear-gradient(135deg, #ffd166 0%, #ffb347 100%); color: white; padding: 15px 25px; border-radius: 15px; margin-bottom: 25px; font-size: 1.3em; font-weight: bold; box-shadow: 0 6px 15px rgba(255, 177, 71, 0.3); animation: pulse 2s infinite; border: 3px solid white; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        h1 { color: #ff6b6b; font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+        .birthday-name { color: #ff6b6b; font-size: 1.8em; font-weight: bold; background: linear-gradient(45deg, #ff9a9e, #fad0c4); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 10px 20px; display: inline-block; border-radius: 15px; margin-bottom: 25px; }
+        .decoration { font-size: 3em; margin: 20px 0; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        .message-container { background: linear-gradient(135deg, #fff9f9 0%, #ffeaea 100%); border-radius: 20px; padding: 40px 30px; margin: 25px 0; border-left: 8px solid #ff6b6b; box-shadow: 0 8px 20px rgba(255, 107, 107, 0.15); position: relative; overflow: hidden; }
+        .message-container:before { content: "💖"; position: absolute; top: 10px; right: 10px; font-size: 2em; opacity: 0.2; }
+        .message-container:after { content: "💝"; position: absolute; bottom: 10px; left: 10px; font-size: 2em; opacity: 0.2; }
+        .message { font-size: 1.4em; line-height: 1.8; color: #555; margin-bottom: 25px; position: relative; z-index: 1; }
+        .special-message { font-style: italic; margin-top: 25px; padding-top: 25px; border-top: 2px dashed #ff9a9e; color: #ff6b6b; font-weight: bold; font-size: 1.3em; position: relative; z-index: 1; }
+        .birthday-date { background: linear-gradient(135deg, #ff6b6b 0%, #ff9a9e 100%); color: white; padding: 20px; border-radius: 15px; margin: 25px 0; font-size: 1.5em; font-weight: bold; box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3); }
+        .wishes { font-size: 1.2em; color: #666; margin: 25px 0; padding: 20px; background-color: #fff; border-radius: 15px; border: 2px dashed #ff9a9e; }
+        .balloon { position: absolute; width: 60px; height: 70px; background: #ff6b6b; border-radius: 50%; z-index: -1; animation: float 25s infinite linear; }
+        .balloon:before { content: ""; position: absolute; width: 2px; height: 25px; background-color: #ff6b6b; top: 100%; left: 50%; transform: translateX(-50%); }
+        .balloon:nth-child(odd) { background-color: #ff9a9e; animation-duration: 30s; animation-delay: 2s; }
+        .balloon:nth-child(3n) { background-color: #ffd166; animation-duration: 28s; animation-delay: 4s; }
+        .balloon:nth-child(4n) { background-color: #a8e6cf; animation-duration: 32s; animation-delay: 1s; }
+        .balloon:nth-child(5n) { background-color: #ffb347; animation-duration: 26s; animation-delay: 3s; }
+        @keyframes float { 0% { transform: translateY(100vh) rotate(0deg); } 100% { transform: translateY(-100vh) rotate(360deg); } }
+        .footer { margin-top: 35px; color: #888; font-size: 1em; padding-top: 20px; border-top: 1px solid #eee; }
+        .hearts { font-size: 1.8em; margin: 20px 0; animation: heartbeat 1.5s infinite; }
+        @keyframes heartbeat { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+        .signature { margin-top: 30px; font-size: 1.6em; color: #ff6b6b; font-weight: bold; background: linear-gradient(45deg, #ff9a9e, #ff6b6b); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 20px; border-radius: 15px; display: inline-block; box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2); animation: signaturePulse 3s infinite; }
+        @keyframes signaturePulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.9; } }
+        @media (max-width: 768px) { .container { padding: 30px 20px; } h1 { font-size: 2.2em; } .kevin-message { font-size: 1.1em; padding: 12px 20px; } .birthday-name { font-size: 1.4em; } .message { font-size: 1.1em; } .message-container { padding: 25px 20px; } .birthday-date { font-size: 1.2em; padding: 15px; } .signature { font-size: 1.4em; padding: 15px; } }
+    </style>
+</head>
+<body>
+    <div class="balloon" style="left: 5%;"></div><div class="balloon" style="left: 15%;"></div><div class="balloon" style="left: 25%;"></div><div class="balloon" style="left: 75%;"></div><div class="balloon" style="left: 85%;"></div><div class="balloon" style="left: 95%;"></div><div class="balloon" style="left: 50%;"></div><div class="balloon" style="left: 60%;"></div>
+    
+    <div class="container">
+        <div class="kevin-message">De Kevin ✨</div>
+        
+        <h1>🎉 ¡Feliz Cumpleaños! 🎂</h1>
+        <div class="birthday-name">Para: Adri</div>
+        <div class="decoration">✨ 🎈 🎊</div>
+        <div class="birthday-date">4 de Enero - Tu día especial</div>
+        <div class="hearts">❤️ 💖 💝</div>
+        
+        <div class="message-container">
+            <div class="message">¡Hoy es un día muy especial! Estamos celebrando el cumpleaños de una persona increíble, Adri. Que este nuevo año de vida esté lleno de alegría, amor, salud y muchas bendiciones.</div>
+            <div class="message">Que cada momento de este día sea tan especial como tú. Que la felicidad te acompañe hoy y siempre, y que todos tus sueños se hagan realidad en este nuevo capítulo de tu vida.</div>
+            <div class="special-message">¡Que tengas el mejor día de tu vida! Disfruta cada momento, mereces toda la felicidad del mundo. ¡A celebrar con alegría!</div>
+        </div>
+        
+        <div class="wishes">Con mucho cariño y los mejores deseos para ti en tu día especial.</div>
+        
+        <!-- Firma actualizada con emojis tiernos -->
+        <div class="signature">Saludos con amor 💕 Kevin 🥰🐻🌸</div>
+        
+        <div class="decoration">🎁 🍰 🥳</div>
+        
+        <div class="footer">
+            <p>¡Que tengas un cumpleaños maravilloso!</p>
+            <p style="margin-top: 10px; font-size: 1.2em;">✨💫🌟</p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const balloons = document.querySelectorAll('.balloon');
+            balloons.forEach((balloon, index) => { balloon.style.animationDelay = `${index * 0.5}s`; });
+            
+            setTimeout(() => {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed'; confetti.style.top = '0'; confetti.style.left = '0'; confetti.style.width = '100%'; confetti.style.height = '100%'; confetti.style.pointerEvents = 'none'; confetti.style.zIndex = '9999'; confetti.style.backgroundImage = `radial-gradient(circle at 25% 25%, #ff6b6b 2px, transparent 2px), radial-gradient(circle at 75% 75%, #ffd166 2px, transparent 2px), radial-gradient(circle at 50% 50%, #a8e6cf 2px, transparent 2px)`; confetti.style.backgroundSize = '50px 50px'; confetti.style.animation = 'confetti 2s forwards'; document.body.appendChild(confetti);
+                
+                const style = document.createElement('style'); 
+                style.textContent = `@keyframes confetti { 0% { opacity: 0; transform: scale(0.5); } 50% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.2); } }`; 
+                document.head.appendChild(style);
+                
+                setTimeout(() => { confetti.remove(); style.remove(); }, 2000);
+            }, 500);
+            
+            setInterval(() => { 
+                const kevinMsg = document.querySelector('.kevin-message'); 
+                kevinMsg.style.boxShadow = `0 6px 20px rgba(255, ${Math.floor(Math.random()*100)+150}, 71, 0.4)`; 
+            }, 1500);
+            
+            // Efecto especial para la firma
+            const signature = document.querySelector('.signature');
+            const emojis = ['💕', '🥰', '🐻', '🌸', '💖', '🐾', '🌷', '🫂'];
+            let emojiIndex = 0;
+            
+            setInterval(() => {
+                const currentEmojis = signature.textContent.split('Kevin ')[1];
+                const newEmojis = emojis.slice(emojiIndex, emojiIndex + 3).join('');
+                signature.innerHTML = `Saludos con amor 💕 Kevin ${newEmojis}`;
+                emojiIndex = (emojiIndex + 1) % (emojis.length - 2);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
